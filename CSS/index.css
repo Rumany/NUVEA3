@@ -1,0 +1,255 @@
+body {
+    background-image: url("../images1/lobbyarea/background2.jpg");
+    background-repeat: no-repeat;
+    background-size:cover; /* الصورة تفضل بحجمها الطبيعي */
+    background-attachment: fixed; /* الخلفية تفضل ثابتة */
+    background-position: center center; /* الصورة في منتصف الصفحة */
+    background-color: #000; /* لون خلفية احتياطي لو الصورة صغيرة */
+
+}
+
+
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;   
+    background-color: rgba(0, 0, 0, 0.404);
+    z-index: -1;
+}
+
+
+/* الهيدر */
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 60px;
+    margin-left: 15px;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+}
+
+.text-gold {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #d4af37 !important;
+}
+
+/* زر لوحة التحكم */
+.dashboard-link {
+    display: none;
+}
+
+/* زر تسجيل الخروج */
+.nav-item a[href='index.html'] {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    color: #1e2a38 !important;
+    padding: 6px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-item a[href='index.html']:hover {
+    background: linear-gradient(90deg, #a88c3e, #b8922b);
+    color: white !important;
+}
+
+
+/* المحتوى الرئيسي */
+main {
+   /* min-height: 30vh;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 110px;     /* المسافة من الأعلى */
+    margin-bottom: 5px;  /* المسافة من الأسفل */
+}
+
+.btn-gold {
+    background: linear-gradient(90deg, #bfa14a, #d4af37, #b58d2b);
+    border: none;
+    color: #1e2a38;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(90deg, #a88c3e, #b8922b);
+    color: white;
+}
+
+.bottn-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/********************************************************
+/* ===== كروت الغرف ===== */
+.room-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* التأثير عند تمرير الماوس على الكارت */
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* صورة الغرفة */
+.room-card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+/* عنوان الغرفة */
+.room-card h5 {
+    color: #f9d67a;
+    font-weight: bold;
+}
+
+/* السعر */
+.room-card .text-primary {
+    color: #ffd700 !important;
+}
+
+/* البادجات (متاحة / محجوزة) */
+.badge {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+/* زر الحجز */
+.room-card .btn-primary {
+    background-color: #f9d67a;
+    color: #0a2a43;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+}
+
+.room-card .btn-primary:hover {
+    background-color: #ffe37f;
+    color: #0a2a43;
+}
+
+/* زر غير متاح */
+.room-card .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: not-allowed;
+}
+/********************************************************
+
+
+
+/* قسم المميزات */
+#features {
+    background-image: url("../images1/RoomSuite/pexels-ron-lach-10260856.jpg");
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+.feature-box {
+    background-color: rgba(40, 40, 50, 0.9);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 60px;
+}
+
+.text-muted {
+    color: #ffffff !important;
+}
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
+}
+
+.feature-box i {
+    font-size: 3rem;
+}
+
+/* قسم آراء العملاء */
+#reviews {
+    background-color: rgba(20, 20, 30, 0.9);
+}
+
+.review-card {
+    background-color: rgba(30, 30, 40, 0.9);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
+}
+
+.review-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+}
+
+/* قسم عن الفندق */
+#about {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#about img {
+    width: 100%;             /* يخلي الصورة تاخد عرض العمود بالكامل */
+    height: 250px;           /* ارتفاع ثابت لكل الصور */
+    object-fit: cover; 
+    transition: transform 0.3s;
+    border-radius: 15px;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+
+/* الفوتر */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* حركة الظهور */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
